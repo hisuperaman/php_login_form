@@ -34,6 +34,8 @@
         }
         else
         {
+            setcookie('lusr');
+            setcookie('lpass');
             echo '<center style="color: red;">Incorrect username/password</center>';
         }
     }
