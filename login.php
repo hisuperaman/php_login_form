@@ -19,6 +19,7 @@
 
         if(!empty($row))
         {
+            $_SESSION['username'] = $user;
             if(!empty($_POST['remember']))
             {
                 setcookie('lusr', $user, time()+60*60);
@@ -29,13 +30,10 @@
                 setcookie('lusr');
                 setcookie('lpass');
             }
-            $_SESSION['username'] = $user;
             header("location: home.php");
         }
         else
         {
-            setcookie('lusr');
-            setcookie('lpass');
             echo '<center style="color: red;">Incorrect username/password</center>';
         }
     }
