@@ -27,8 +27,10 @@
             }
             else
             {
-                setcookie('lusr');
-                setcookie('lpass');
+                if(isset($_COOKIE['lusr']))
+                    setcookie('lusr');
+                if(isset($_COOKIE['lpass']))
+                    setcookie('lpass');
             }
             header("location: home.php");
         }
